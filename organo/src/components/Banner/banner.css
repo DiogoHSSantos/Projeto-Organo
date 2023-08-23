@@ -1,0 +1,8 @@
+:root{
+    --fundoAzul: #6278F7;
+}
+
+img{
+    background: var(--fundoAzul);
+    width: 100%;
+}
