@@ -1,31 +1,30 @@
 // import { useState } from 'react'
 
 import './form.css'
+import { AreaTexto } from '../AreaTexto/areaTexto.jsx'
+import ListaSuspensa from '../ListaSuspensa'
+import Botao from '../botao'
 
 
 
 
-const AreaTexto = (props) =>{
-
-    console.log(props)
-    const label = props.label;
-
-    return(
-        <div className="campoText">
-            <label htmlFor={label}>{label}</label>
-            <input type="text" name={label} id={label} placeholder={props.placeholder}/>
-        </div>
-    )
+const aoSalvar = (e)=>{
+    e.preventDefault();
+    alert()
 }
 
 export const Formulario = ()=>{
     return(
         <section className='formContainer'>
-            <form className='formulario'>      
+            <form className='formulario' onSubmit={aoSalvar}>      
                 <h2>Preencha os dados para criar o card do colaborador.</h2> 
-                <AreaTexto label='Nome:' placeholder='Digite o seu nome'/>
-                <AreaTexto label='Cargo:' placeholder='Digite o cargo'/>
-                <AreaTexto label='Imagem:' placeholder='Digite o endereço da imagem'/>
+                <AreaTexto obrigatorio={true} label='Nome:' placeholder='Digite o seu nome'/>
+                <AreaTexto obrigatorio={true} label='Cargo:' placeholder='Digite o cargo'/>
+                <AreaTexto obrigatorio={true} label='Imagem:' placeholder='Digite o endereço da imagem'/>
+                <ListaSuspensa label='times'/>
+                <Botao>
+                    Criar card
+                </Botao>
             </form>
         </section>
     )

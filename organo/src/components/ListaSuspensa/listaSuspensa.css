@@ -1,0 +1,25 @@
+:root{
+    --branco: #ffffff;
+    --preto: #000000;
+    --cinzaClaro: #e4e4e4;
+}
+
+.areaListaSuspensa{
+    display: flex;
+    flex-direction: column;
+}
+
+.areaListaSuspensa label{
+    font-size: 18px;
+}
+.areaListaSuspensa select{
+    width: 100%;
+
+    background: var(--branco);
+    box-shadow: 0px 5px 10px #00000060;
+    font-size: 18px;
+    padding: 18px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+}
