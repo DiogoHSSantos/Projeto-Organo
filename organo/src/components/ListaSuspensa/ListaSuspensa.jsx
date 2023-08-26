@@ -2,20 +2,25 @@ import './listaSuspensa.css';
 
 export const ListaSuspensa = (props)=>{
 
-    let p = props;
+    const p = props;
 
     const items = [
-        'Vermelho',
-        'Azul',
-        'amarelo'
+        'Front-end',
+        'Data Science',
+        'Devops',
+        'UX e UI Design',
+        'Mobile',
+        'Inovação e Gestão'
     ];
     
+    const aoEscolher = (e)=>{
+       p.aoAlterado(e.target.value); 
+    };
 
     return(
         <div className='areaListaSuspensa'>
             <label htmlFor={p.label}>{p.label}</label>
-            <select defaultValue='Selecione o time'>
-                <option disabled value='Selecione o time'>Selecione o time</option>
+            <select  onChange={aoEscolher} value={p.value}>
                 {items.map(item => <option key={Math.floor(Math.random()*1000)}>{item}</option>)}
             </select>
         </div>

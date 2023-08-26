@@ -1,16 +1,19 @@
+
 import './areaTexto.css';
 
 
 export const AreaTexto = (props) =>{
 
-    let p = props;
+    const p = props;
 
-    const label = p.label;
+    const aoDigitado = (e)=>{
+        p.aoAlterado(e.target.value)
+    }
 
     return(
         <div className="campoText">
-            <label htmlFor={label}>{label}</label>
-            <input required={p.obrigatorio} type="text" name={label} id={label} placeholder={p.placeholder}/>
+            <label htmlFor={p.label}>{p.label}</label>
+            <input value={p.value} onChange={aoDigitado} required={p.obrigatorio} type="text" name={p.label} id={p.label} placeholder={p.placeholder}/>
         </div>
     )
 }
