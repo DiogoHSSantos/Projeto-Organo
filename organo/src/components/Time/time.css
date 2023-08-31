@@ -1,0 +1,37 @@
+:root{
+    --escuro: #21222c;
+    --claro: #7c7fa2;
+    --neutro: #50526b;
+    --maisClaro: #b4b9ed;
+    --maisEscuro: #13131b;
+
+    --cinza: #e4e4e4;
+}
+
+.time{
+    background: var(--claro);
+    text-align: center;
+    font-size: 18px;
+    padding: 32px;
+    border-top:1px solid;
+    box-shadow:10px 10px 20px #00000030;
+}
+
+.time .nomeDoTime{
+    text-align: center;
+    display: inline-block;
+    margin: auto;
+
+
+    border-bottom: 4px solid ;
+    padding-bottom: 8px;
+    margin-bottom:32px ;
+}
+
+.time .colaboradores{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+}

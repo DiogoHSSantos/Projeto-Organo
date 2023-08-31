@@ -4,14 +4,7 @@ export const ListaSuspensa = (props)=>{
 
     const p = props;
 
-    const items = [
-        'Front-end',
-        'Data Science',
-        'Devops',
-        'UX e UI Design',
-        'Mobile',
-        'Inovação e Gestão'
-    ];
+    const items = p.itens;
     
     const aoEscolher = (e)=>{
        p.aoAlterado(e.target.value); 

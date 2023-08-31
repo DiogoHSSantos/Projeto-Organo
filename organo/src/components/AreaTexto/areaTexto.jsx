@@ -12,7 +12,7 @@ export const AreaTexto = (props) =>{
 
     return(
         <div className="campoText">
-            <label htmlFor={p.label}>{p.label}</label>
+            <label id={p.id} htmlFor={p.label}>{p.label}<span className='span'>{p.span}</span></label>
             <input value={p.value} onChange={aoDigitado} required={p.obrigatorio} type="text" name={p.label} id={p.label} placeholder={p.placeholder}/>
         </div>
     )

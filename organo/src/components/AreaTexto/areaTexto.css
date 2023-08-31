@@ -26,3 +26,16 @@
     border: none;
     border-radius: 5px;
 }
+.campoText .span{
+    position: absolute;
+    opacity: 0;
+    background: var(--branco);
+    color: var(--preto);
+    font-weight: 800;
+
+    transition: .3s;
+}
+
+.campoText label:hover .span{
+    opacity: 1;
+}
