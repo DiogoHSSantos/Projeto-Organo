@@ -1,5 +1,6 @@
 .colaborador {
     width: 280px;
+    position: relative;
 }
 
 .colaborador .cabecalho {
@@ -12,6 +13,7 @@
     border-radius: 50%;
     position: relative;
     bottom: -50px;
+    
 }
 
 .colaborador .rodape {
@@ -35,4 +37,14 @@
     line-height: 22px;
     color: #212121;
     padding: 0 16px;
+}
+
+.colaborador .bx{
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    font-size: 22px;
+    color: #21222c;
+
+    cursor: pointer;
 }

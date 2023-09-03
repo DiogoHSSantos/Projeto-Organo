@@ -26,9 +26,10 @@ export const Time = (props)=>{
 
     return(
         p.colaboradores.length > 0 ? <section className='time' id={p.id} style={{background: p.corSecundaria, borderColor: p.corPrimaria,}}>
+            <input type="color" name="colorTime" id="colorTime" />
             <h3 className='nomeDoTime' style={{borderColor: p.corPrimaria}}>{p.nomeDoTime}</h3>
             <div className='colaboradores'>
-                {p.colaboradores.map(i => <Colaborador key={Math.floor(Math.random()*1000)} nome={i.nome} cargo={i.cargo} imagem={i.imagem === ''? i.imagem = images :i.imagem} corDeFundo={p.corPrimaria}/>)}
+                {p.colaboradores.map(i => <Colaborador key={Math.floor(Math.random()*1000)} nome={i.nome} cargo={i.cargo} imagem={i.imagem === ''? i.imagem = images :i.imagem} corDeFundo={p.corPrimaria}  aoDeletar={p.aoDeletar}/>)}
             </div>
         </section>
         :'  '

@@ -8,6 +8,7 @@ export const Colaborador = (props)=>{
         <div className='colaborador'>
             <div className='cabecalho' style={{background: p.corDeFundo}}>
                 <img src={p.imagem} alt={`imagem do ${p.nome}`} />
+                <i className='bx bxs-trash-alt' onClick={p.aoDeletar}></i>
             </div>
 
             <div className='rodape'>
