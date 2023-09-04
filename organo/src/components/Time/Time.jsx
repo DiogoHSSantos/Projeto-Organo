@@ -1,4 +1,5 @@
 
+import { useState } from 'react';
 import Colaborador from '../Colaborador'
 import './time.css'
 
@@ -23,15 +24,43 @@ export const Time = (props)=>{
 
     const images = fontes[imagemAleatoria];
 
+    
+    const [cor, setCor] = useState(p.corPrimaria);
+
+    const mudarCor = (corDoInput)=>{
+        setCor(corDoInput);
+    };
+    
+   
 
     return(
-        p.colaboradores.length > 0 ? <section className='time' id={p.id} style={{background: p.corSecundaria, borderColor: p.corPrimaria,}}>
-            <input type="color" name="colorTime" id="colorTime" />
-            <h3 className='nomeDoTime' style={{borderColor: p.corPrimaria}}>{p.nomeDoTime}</h3>
-            <div className='colaboradores'>
-                {p.colaboradores.map(i => <Colaborador key={Math.floor(Math.random()*1000)} nome={i.nome} cargo={i.cargo} imagem={i.imagem === ''? i.imagem = images :i.imagem} corDeFundo={p.corPrimaria}  aoDeletar={p.aoDeletar}/>)}
-            </div>
-        </section>
-        :'  '
+        p.colaboradores.length > 0 ? 
+            <section className='time' id={p.id} style={{background: cor+'99', borderColor: cor,}}>
+
+                <input 
+                    type="color" 
+                    name="colorTime" 
+                    id="colorTime" 
+                    value={cor} 
+                    onChange={(corDoInput) => mudarCor(corDoInput.target.value)}
+                />
+
+                <h3 className='nomeDoTime' style={{borderColor: cor}}>
+                    {p.nomeDoTime}
+                </h3>
+
+                <div className='colaboradores'>
+                    {p.colaboradores.map(i =>   
+                        <Colaborador 
+                            key={Math.floor(Math.random()*1000)} 
+                            nome={i.nome} cargo={i.cargo} 
+                            imagem={i.imagem === ''? i.imagem = images :i.imagem} 
+                            corDeFundo={cor}  
+                            aoDeletar={p.aoDeletar}
+                        />)
+                    }
+                </div>
+            </section>
+        :''
     );
 };

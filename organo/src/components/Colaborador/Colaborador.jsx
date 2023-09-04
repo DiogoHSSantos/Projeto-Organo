@@ -3,12 +3,11 @@ import './colaborador.css';
 export const Colaborador = (props)=>{
 
     const p = props;
-
     return(
         <div className='colaborador'>
             <div className='cabecalho' style={{background: p.corDeFundo}}>
                 <img src={p.imagem} alt={`imagem do ${p.nome}`} />
-                <i className='bx bxs-trash-alt' onClick={p.aoDeletar}></i>
+                <i className='bx bxs-x-circle' onClick={p.aoDeletar}></i>
             </div>
 
             <div className='rodape'>

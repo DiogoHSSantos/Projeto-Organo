@@ -1,6 +1,7 @@
 .colaborador {
     width: 280px;
     position: relative;
+    cursor: context-menu;
 }
 
 .colaborador .cabecalho {
@@ -13,6 +14,7 @@
     border-radius: 50%;
     position: relative;
     bottom: -50px;
+
     
 }
 
@@ -41,10 +43,10 @@
 
 .colaborador .bx{
     position: absolute;
-    right: 8px;
-    top: 8px;
-    font-size: 22px;
-    color: #21222c;
+    right: -8px;
+    top: -8px;
+    font-size: 28px;
+    color: #e4e4e4;
 
     cursor: pointer;
 }
