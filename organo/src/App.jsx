@@ -54,8 +54,8 @@ function App() {
     setColaboradores([...colaboradores, c])
   }
 
-  const deletarColaborador = ()=>{
-    setColaboradores(colaboradores.filter(item => item.remove)) 
+  const deletarColaborador = (i)=>{
+    setColaboradores(colaboradores.filter(col=> col.nome == i ? i.remove : ''))
   };
     
   

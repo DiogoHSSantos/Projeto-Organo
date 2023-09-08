@@ -53,7 +53,9 @@ export const Time = (props)=>{
                     {p.colaboradores.map(i =>   
                         <Colaborador 
                             key={Math.floor(Math.random()*1000)} 
-                            nome={i.nome} cargo={i.cargo} 
+                            nome={i.nome} 
+                            cargo={i.cargo} 
+                            id={Math.floor(Math.random()*1000)}
                             imagem={i.imagem === ''? i.imagem = images :i.imagem} 
                             corDeFundo={cor}  
                             aoDeletar={p.aoDeletar}
